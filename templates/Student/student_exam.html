@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <html>
+        <form action="/Student/student_mark/" method="POST">
+            {% csrf_token %}
+            {% for question,option1,option2,option3,option4 in val %}
+            <h4>{{question}}</h4>
+            {{option1}}
+            <br>
+            {{option2}}
+            <br>
+            {{option3}}
+            <br>
+            {{option4}}
+            <br>
+            <input type="text" placeholder="eg:option1" name="option" >
+            {% endfor %}
+            <br><br>
+            <button>SUBMIT</button>
+        </form>
+    </html>
+</html>

@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h3>Exam det</h3>
+        <div>
+        <div>
+        <div>
+        <form action="/Admin/save_exam/" method="POST">
+            {% csrf_token %}
+            <label for="course_name">Exam Name</label>
+            <select name="course" id="course">
+                <option value="java">JAVA</option>
+                <option value="python">PYTHON</option>
+                <option value="C/C++">C/C++</option>
+            </select>
+            <br>
+            <label for="question_number">Total Question</label>
+            <input type="text" name="tot_question">
+            <br>
+            <label for="total_marks">Total Marks</label>
+            <input type="text" name="tot_mark">
+            <br>
+            <button name="add" value="save_exam">ADD</button>
+            
+        </form>
+       </div>
+       </div>
+       </div>
+        
+    </body>
+</html>

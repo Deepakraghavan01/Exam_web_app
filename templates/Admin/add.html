@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <style>
+           <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      a:link {
+            text-decoration: none;
+          }
+        
+      </style>
+    </head>
+    <body>
+    <h2 style="text-align:center; color:blue;">ADD QUESTION</h2>
+    <form action="/Admin/db/" method="POST" autocomplete="off" style="margin:100px;margin-top: 0px;">
+        {%csrf_token%}
+        <div class="form-group">
+          <label for="course"Course>Course_Name</label>
+          <select name="course" id="course">
+            <option value="java">JAVA</option>
+            <option value="python">PYTHON</option>
+            <option value="C/C++">C/C++</option>
+        </select>
+          <br>
+          <label for="question">Question</label>
+          <input type="text" name="question">
+            <br>
+          <label for="question_number">Marks</label>
+          <input type="text" name="mark">
+            <br>
+          <label for="option1">Option 1</label>
+          <input type="text" name="option1">
+            <br>
+          <label for="option2">Option 2</label>
+          <input type="text" name="option2">
+          <br>
+          <label for="option3">Option 3</label>
+          <input type="text" name="option3">
+            <br>
+          <label for="option4">Option 4</label>
+          <input type="text" name="option4">
+            <br>
+          <label for="answer">Answer</label>
+          <input type="text" name="ans">
+        </div>
+        
+    
+        <button type="submit" class="btn btn-primary",value="db">ADD</button>
+      </form>
+    <br><br><br>
+        </body>
+</html>

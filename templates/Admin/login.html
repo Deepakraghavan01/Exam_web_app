@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="container">
+            <h3>ADMIN LOGIN</h3>
+            <form action="/Admin/question_dash/" method="POST">
+                {% csrf_token %}
+                <input type="email" name="email" placeholder="enter your email"><br/><br/>
+                <input type="password" name="password" placeholder="enter your password"><br/><br/>
+                <button type="submit" class="button">SUBMIT</button>
+            </form>
+    </div>
+</body>
+</html>

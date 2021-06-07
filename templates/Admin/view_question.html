@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Course</th>
+                <th>Question</th>
+                <th>Mark</th>
+                <th>Delete</th>
+            </tr>
+            {% for question,mark,course in tot %}
+            <tr>
+            <td>{{course}}</td>
+             <td>{{question}}</td>
+             <td>{{mark}}</td>
+             <td><button>Delete</button></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+.container{
+    color: blueviolet;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-align: center;
+    padding-top: 40px;
+    
+}
+.button{
+    color: chartreuse;
+    background-color: black;
+}

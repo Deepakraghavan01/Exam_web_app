@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            a:link {
+              text-decoration: none;
+            }
+        
+            .order-card {
+              color: rgb(255, 255, 255);
+            }
+        
+            .bg-c-blue {
+              background: #090a0a;
+            }
+        
+            .bg-c-green {
+              background:#0a0a0a;
+            }
+        
+            .bg-c-yellow {
+              background: #080808;
+            }
+        
+            .bg-c-pink {
+              background: #161616;
+            }
+        
+        
+            .card {
+              
+              -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+              box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+              border: 1px solid black;
+              margin-bottom: 30px;
+              -webkit-transition: all 0.3s ease-in-out;
+              transition: all 0.3s ease-in-out;
+            }
+        
+            .card .card-block {
+              padding: 25px;
+            }
+        
+            .order-card i {
+              font-size: 26px;
+            }
+        
+            .f-left {
+              float: left;
+            }
+        
+            .f-right {
+              float: right;
+            }
+            header {
+            left: 0px;
+            right: 0px;
+          }
+          </style>
+    </head>
+    <body>
+        {% for course,mark in course %}
+        <div class="col-md-4 col-xl-6">
+            <div class="card bg-c-yellow order-card">
+              <div class="card-block">
+                <form action="/Student/student_exam/" method="POST">
+                {% csrf_token %}
+                <h3 class="m-b-20">COURSE:{{course}}</h3>
+               <h3 class="text-right"><i class="fas fa-book f-left"></i><span>MARK:{{mark}}</span></h3>
+               <button>START</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+    </body>
+</html>

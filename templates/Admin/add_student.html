@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div>
+            <form action="/Admin/stu_det/" method="POST">
+                {% csrf_token %}
+                <label for="Email_id">STUDENT_EMAIL</label>
+                <input type="text" name="stu_mail">
+                <button>SUBMIT</button>
+            </form>
+        </div>
+    </body>
+</html>
