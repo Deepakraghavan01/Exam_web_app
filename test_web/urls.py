@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from web_test import views
+from django.conf import settings
+from django.views.static import serve
+from django.conf.urls import url
 
 urlpatterns = [
     path(r'',views.home),
@@ -33,5 +36,6 @@ urlpatterns = [
     path(r'Student/student_dash/',views.student_dash),
     path(r'Student/student_exam/',views.student_exam),
     path(r"Student/student_mark/",views.student_mark),
-
+    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
 ]
